@@ -1,0 +1,8 @@
+<div class="container mt-4">
+  <!-- cooonect form component here -->
+  <app-person-in (totalData)="receivedData($event)"></app-person-in>
+
+  <!-- app tabel -->
+  <app-tabel [totalDataFromParrent]="totalDataFromChild"></app-tabel>
+</div>
+

@@ -1,0 +1,53 @@
+<form>
+    <div class="row">    
+        <div class="mb-3 col-6">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control form-control-sm" placeholder="abc@gmail.com" name="email" [(ngModel)]="email">
+        </div>
+        <div class="mb-3 col-6">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control form-control-sm" placeholder="********" name="password" [(ngModel)] ="password">
+        </div>
+
+        <div class="mb-3 col-6">
+            <label class="form-label">First Name</label>
+            <input class="form-control form-control-sm" placeholder="Please Your First Name" name="firstName" [(ngModel)]="firstName">
+           </div>
+        <div class="mb-3 col-6">
+            <label class="form-label">Last Name</label>
+            <input class="form-control form-control-sm" placeholder="Please Your Last Name" name="lastName" [(ngModel)]="lastName">
+           </div>
+
+           <div class="mb-3 col-6">
+            <label class="form-label">Present Address</label>
+            <input class="form-control form-control-sm" placeholder="Please Your Present Address" name="presentAddress" [(ngModel)]="presentAddress">
+           </div>
+           <div class="mb-3 col-6">
+            <label class="form-label">Past Address</label>
+            <input class="form-control form-control-sm" placeholder="Please Your Past Address" name="pastAddress" [(ngModel)]="pastAddress">
+           </div>
+           <div class="mb-3 col-6">
+            <label class="form-label">National ID No</label>
+            <input type="number" class="form-control form-control-sm" placeholder="Please Your ID No" name="idNo" [(ngModel)]="idNo">
+           </div>
+           <div class="mb-3 col-6">
+            <label class="form-label">Your Age</label>
+            <input type="number" class="form-control form-control-sm" placeholder="Please Your Age" name="yourAge" [(ngModel)]="yourAge">
+           </div>
+           <div class="mb-3 col-6">
+            <label class="form-label">Your Mobile Number</label>
+            <input type="number" class="form-control form-control-sm" placeholder="01XXXXXXXXX" name="mobileNo" [(ngModel)]="mobileNo">
+           </div>
+           <div class="mb-3 col-6">
+            <label class="form-label">Passport Number</label>
+            <input type="number" class="form-control form-control-sm" placeholder="XXXXXXXXX" name="passportNo" [(ngModel)]="passportNo">
+           </div>
+           <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="isBangladeshi" [(ngModel)]="isBangladeshi">
+            <label class="form-check-label" for="exampleCheck1">Are You Bangladeshi</label>
+          </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary me-2" (click)="onSubmit()">Submit</button>
+    <button type="reset" class="btn btn-primary" (click)="onRest()">Reset</button>
+  </form>

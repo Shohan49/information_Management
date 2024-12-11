@@ -1,0 +1,36 @@
+<table class="table table-hover mt-4">
+  <thead>
+    <tr>
+      <th scope="col">Email address</th>
+      <th scope="col">Password</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Present Address</th>
+      <th scope="col">Past Address</th>
+      <th scope="col">National ID No</th>
+      <th scope="col">Age</th>
+      <th scope="col">Mobile Number</th>
+      <th scope="col">Passport Number</th>
+      <th scope="col">Is Bangladeshi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{totalDataFromParrent.email}}</td>
+      <td>{{totalDataFromParrent.password}}</td>
+      <td>{{totalDataFromParrent.firstName}} {{totalDataFromParrent.lastName}}</td>
+      <td>{{totalDataFromParrent.presentAddress}}</td>
+      <td>{{totalDataFromParrent.pastAddress}}</td>
+      <td>{{totalDataFromParrent.idNo}}</td>
+      <td>{{totalDataFromParrent.yourAge}}</td>
+      <td>{{totalDataFromParrent.mobileNo}}</td>
+      <td>{{totalDataFromParrent.passportNo}}</td>
+      <td>
+        @if (totalDataFromParrent.isBangladeshi) {
+          <span>Bangladeshi</span>
+        } @else {
+          <span>Halai Indian</span>
+        }
+      </td>
+    </tr>
+  </tbody>
+</table>

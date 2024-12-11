@@ -1,0 +1,20 @@
+[
+    {
+        "persons": [
+            {
+                "id": 1,
+                "email": "test@test.com",
+                "password": "test123",
+                "firstName": "Test",
+                "lastName": "Test last",
+                "presentAddress": "abc test",
+                "pastAddress": "test test",
+                "idNo": "755e43",
+                "yourAge": "43",
+                "mobileNo": "979687574",
+                "passportNo": "786774635",
+                "isBangladeshi": false
+            }
+        ]
+    }
+]
