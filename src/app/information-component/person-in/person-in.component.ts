@@ -26,8 +26,9 @@ export class PersonInComponent {
     let totalData = {
       email: this.email, password: this.password, firstName: this.firstName, lastName: this.lastName, presentAddress: this.presentAddress, pastAddress: this.pastAddress, idNo: this.idNo, yourAge: this.yourAge, mobileNo: this.mobileNo, passportNo: this.passportNo, isBangladeshi: this.isBangladeshi
     }
-    console.log(totalData);
-    this.totalData.emit(totalData)
+    // console.log(totalData);
+    this.totalData.emit(totalData);
+    this.onRest();
   }
   onRest() {
     this.email="";

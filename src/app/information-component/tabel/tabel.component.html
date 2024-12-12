@@ -11,26 +11,35 @@
       <th scope="col">Mobile Number</th>
       <th scope="col">Passport Number</th>
       <th scope="col">Is Bangladeshi</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>{{totalDataFromParrent.email}}</td>
-      <td>{{totalDataFromParrent.password}}</td>
-      <td>{{totalDataFromParrent.firstName}} {{totalDataFromParrent.lastName}}</td>
-      <td>{{totalDataFromParrent.presentAddress}}</td>
-      <td>{{totalDataFromParrent.pastAddress}}</td>
-      <td>{{totalDataFromParrent.idNo}}</td>
-      <td>{{totalDataFromParrent.yourAge}}</td>
-      <td>{{totalDataFromParrent.mobileNo}}</td>
-      <td>{{totalDataFromParrent.passportNo}}</td>
-      <td>
-        @if (totalDataFromParrent.isBangladeshi) {
-          <span>Bangladeshi</span>
-        } @else {
-          <span>Halai Indian</span>
-        }
-      </td>
-    </tr>
+    @for (item of totalDataFromParrent; track $index) {
+      <tr>
+        <td>{{item.email}}</td>
+        <td>{{item.password}}</td>
+        <td>{{item.firstName}} {{item.lastName}}</td>
+        <td>{{item.presentAddress}}</td>
+        <td>{{item.pastAddress}}</td>
+        <td>{{item.idNo}}</td>
+        <td>{{item.yourAge}}</td>
+        <td>{{item.mobileNo}}</td>
+        <td>{{item.passportNo}}</td>
+        <td>
+          @if (item.isBangladeshi) {
+            <span>Bangladeshi</span>
+          } @else {
+            <span>Halai Indian</span>
+          }
+        </td>
+        <td>
+          <a type="button" class="btn btn-sm btn-danger" (click)="onDelete($index)">
+            Delete
+          </a>
+        </td>
+      </tr>
+    }
+    
   </tbody>
 </table>

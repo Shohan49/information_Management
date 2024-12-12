@@ -11,10 +11,10 @@ import { PersonInComponent } from './person-in/person-in.component';
   styleUrl: './information-component.component.css'
 })
 export class InformationComponentComponent {
-  totalDataFromChild: any;
+  totalDataFromChild: any = [];
 
   receivedData(data: any) {
-    this.totalDataFromChild = data;
+    this.totalDataFromChild.push(data);
     console.log(data, 'EVent data on parrent');
   }
 

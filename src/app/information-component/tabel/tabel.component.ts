@@ -8,5 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class TabelComponent {
   @Input() totalDataFromParrent: any;
+  onDelete(index: any) {
+    console.log("Delete Triger", index)
+    this.totalDataFromParrent.splice(index,1)
+  }
 
 }
